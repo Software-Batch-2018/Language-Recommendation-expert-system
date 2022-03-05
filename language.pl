@@ -5,32 +5,38 @@ intro :- write('Want to know which language suits you ?'), nl.
 describe(python) :-
   write('Python'), nl,
   write('Widely regarded as the best programming language for beginners'), nl,
-  write('Easiest to learn').
+  write('Easiest to learn'), nl,
+  write('https://www.python.org/').
 
 describe(java) :-
   write('Java'), nl,
   write('One of the most in demand & highest paying programming languages'), nl,
-  write('Slogan: write once, work everywhere').
+  write('Slogan: write once, work everywhere'), nl,
+   write('https://www.java.com/en/').
 
 describe(c/c++) :-
   write('C'), nl,
   write('Lingua franca of programming language'), nl,
-  write('One of the oldest and most widely used language in the world').
+  write('One of the oldest and most widely used language in the world'),nl,
+  write('https://www.programiz.com/c-programming').
 
 describe(javascript) :-
   write('JavaScript'), nl,
   write('Most popular clients-side web scripting language'), nl,
-  write('A must learn for front-end web developer (HTML and CSS as well)').
+  write('A must learn for front-end web developer (HTML and CSS as well)'), nl,
+  write('https://www.javascript.com/').
 
 describe(ruby) :-
   write('Ruby'), nl,
   write('Mostly known for its popular web framework, Ruby on Rails'), nl,
-  write('Focuses on getting things done').
+  write('Focuses on getting things done'), nl,
+  write('https://www.ruby-lang.org/en/').
 
 describe(php) :-
   write('PHP'), nl,
   write('Suitable for building small and simple sites within a short time frame'), nl,
-  write('Supported by almost every web hosting services with lower price').
+  write('Supported by almost every web hosting services with lower price'), nl,
+  write('https://www.php.net/').
 
 
 find_language(Langauge) :- language(Langauge).

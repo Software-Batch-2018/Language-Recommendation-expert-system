@@ -50,7 +50,7 @@ answer(just_for_fun) :- write('Just for fun').
 answer(im_interested) :- write('I\'m interested').
 
 answer(web) :- write('Web').
-answer(mobile) :- write('Mobile');
+answer(mobile) :- write('Mobile').
 
 
 
@@ -62,10 +62,10 @@ answer(front_end) :- write('Front-end (Web interface)').
 answer(back_end) :- write('Back-end ("brain" behind a website)').
 
 
-question(learning_purpose) :- write('Why do you want to learn programming?'), nl.
-question(platform) :- write('Which platform/field?'), nl.
-question(os) :- write('Which OS ?'), nl.
-question(end) :- write("Which end ? "), nl.
+question(learning_purpose) :- write('Why do you want to learn programming ?'), nl.
+question(platform) :- write('Which platform/field are you more interested on ?'), nl.
+question(os) :- write('Which OS product would you develop ?'), nl.
+question(end) :- write('Which end ?'), nl.
 
 
 language(python) :- (learning_purpose(make_money); learning_purpose(i_dont_know)), platform(web), os(windows), end(back_end).
@@ -77,6 +77,8 @@ language(php) :- (learning_purpose(im_interested); learning_purpose(just_for_fun
 language(java) :- (learning_purpose(i_dont_know) ; learning_purpose(im_interested)), (platform(web); platform(mobile), os(android), (end(front_end); end(back_end))).
 
 language(java) :- (learning_purpose(i_dont_know); os(android)).
+
+
 
 
 

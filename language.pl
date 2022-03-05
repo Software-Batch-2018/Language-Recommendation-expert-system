@@ -1,4 +1,4 @@
-main :- intro, find_language(Language), describe(Language), nl, write('Happy Coding'), nl, nl.
+main :- intro, find_language(Language), describe(Language), nl, write(':) Happy Coding :)'), nl, nl.
 intro :- write('Want to know which language suits you ?'), nl.
 
 % Language descriptions for the knowledge base
@@ -12,25 +12,15 @@ describe(java) :-
   write('One of the most in demand & highest paying programming languages'), nl,
   write('Slogan: write once, work everywhere').
 
-describe(c) :-
+describe(c/c++) :-
   write('C'), nl,
   write('Lingua franca of programming language'), nl,
   write('One of the oldest and most widely used language in the world').
-
-describe(cpp) :-
-  write('C++'), nl,
-  write('Complex version of C with a lot more features'), nl,
-  write('Recommended only if you have a mentor to guide you').
 
 describe(javascript) :-
   write('JavaScript'), nl,
   write('Most popular clients-side web scripting language'), nl,
   write('A must learn for front-end web developer (HTML and CSS as well)').
-
-describe(csharp) :-
-  write('C#'), nl,
-  write('A popular choice for enterprise to create websites and Windows application using .NET framework'), nl,
-  write('Similar to Java in basic syntax and some features').
 
 describe(ruby) :-
   write('Ruby'), nl,
@@ -52,8 +42,6 @@ answer(im_interested) :- write('I\'m interested').
 answer(web) :- write('Web').
 answer(mobile) :- write('Mobile').
 
-
-
 answer(ios) :- write('iOS').
 answer(android) :- write('Android').
 answer(windows) :- write('Windows').
@@ -68,16 +56,43 @@ question(os) :- write('Which OS product would you develop ?'), nl.
 question(end) :- write('Which end ?'), nl.
 
 
-language(python) :- (learning_purpose(make_money); learning_purpose(i_dont_know)), platform(web), os(windows), end(back_end).
 
-language(javascript) :- (learning_purpose(just_for_fun); learning_purpose(make_money); learning_purpose(im_interested)), (platform(web); platform(android)), (end(back_end); end(front_end)).
+% Rules for the knowledge base
 
-language(php) :- (learning_purpose(im_interested); learning_purpose(just_for_fun)), platform(web) , os(windows) , end(back_end).
+language(python) :- 
+(learning_purpose(make_money); learning_purpose(i_dont_know)), 
+platform(web),
+os(windows), 
+end(back_end).
 
-language(java) :- (learning_purpose(i_dont_know) ; learning_purpose(im_interested)), (platform(web); platform(mobile), os(android), (end(front_end); end(back_end))).
+language(python) :- 
+learning_purpose(just_for_fun).
 
-language(java) :- (learning_purpose(i_dont_know); os(android)).
+language(javascript) :- 
+(learning_purpose(make_money); learning_purpose(im_interested)),
+(platform(web); platform(android)),
+(end(back_end); end(front_end)).
 
+language(php) :- 
+(learning_purpose(im_interested); learning_purpose(just_for_fun)),
+platform(web),
+os(windows), 
+end(back_end).
+
+language(java) :- 
+(learning_purpose(i_dont_know) ; learning_purpose(im_interested)),
+(platform(web); platform(mobile)),
+os(android),
+(end(front_end); end(back_end)).
+
+language(c/c++) :- 
+learning_purpose(i_dont_know),
+
+language(ruby) :-
+learning_purpose(make_money),
+platform(web),
+os(windows),
+end(back_end)
 
 
 
@@ -108,7 +123,7 @@ end(Answer) :-
   progress(end, Answer).
 end(Answer) :-
   \+ progress(end, _),
-  ask(end, Answer, [front_end , back_ends]).
+  ask(end, Answer, [front_end , back_end]).
 
 
 

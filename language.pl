@@ -92,13 +92,13 @@ os(android),
 (end(front_end); end(back_end)).
 
 language(c/c++) :- 
-learning_purpose(i_dont_know),
+learning_purpose(i_dont_know).
 
 language(ruby) :-
 learning_purpose(make_money),
 platform(web),
 os(windows),
-end(back_end)
+end(back_end).
 
 
 

@@ -1,8 +1,5 @@
 # expert-systems
 A basic expert system, written in Prolog, that suggests what programming language one should learn first.
-
-The system is based on the [this](http://carlcheo.com/wp-content/uploads/2014/12/which-programming-language-should-i-learn-first-infographic.png) infographic.
-
 ## Instalation
 
 In order to run this Prolog program you need to have...Prolog installed:

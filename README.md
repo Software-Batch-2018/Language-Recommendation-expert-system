@@ -1,4 +1,4 @@
-# expert-systems
+# Language recommend expert system
 A basic expert system, written in Prolog, that suggests what programming language one should learn first.
 ## Instalation
 
